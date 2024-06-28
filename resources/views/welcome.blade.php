@@ -15,7 +15,8 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="antialiased">
-       
-        <h1>FUNGE</h1>
+        <div style="width: 100%; height:100vh; filter:grayscale(0)">
+            <h1>FUNGE</h1>
+        </div>
     </body>
 </html>
