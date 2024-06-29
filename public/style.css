@@ -1,11 +1,12 @@
 body{
-    color: rgb(0, 164, 0);
+    /* color: rgb(0, 164, 0); */
+    color: whitesmoke;
     /* background-color: #222; */
     /* background-image: url(https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif); */
     background-image: url(https://www.gifimili.com/gif/2018/03/la-matrice.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: grayscale(1) ;
+    /* backdrop-filter: grayscale(1) ; */
     font-family: 'Figtree';
     font-style: normal;
     font-weight: 400;

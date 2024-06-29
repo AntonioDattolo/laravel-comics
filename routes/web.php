@@ -14,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = config("data");
-    return view('welcome');
+    $data = [
+        "film" => config("data")
+];
+    return view('welcome',$data);
+});
+
+Route::get('/home', function () {
+    $data = [
+        "film" => config("data")
+];
+    return view('welcome',$data);
+});
+Route::get('/details', function () {
+    $data = [
+        "film" => config("data")
+];
+    return view('details',$data);
 });
