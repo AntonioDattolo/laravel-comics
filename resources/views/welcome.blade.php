@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" type="image/svg+xml" src="{{URL::to('fav-icon.ico')}}">
         <title>Laravel</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="antialiased">
-
+        @include('partials.header')
         <section class="container">
 
             <h1 class="text-center my-5" style="font-size: 80px;">Laravel Comics</h1>

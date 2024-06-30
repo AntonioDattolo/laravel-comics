@@ -7,7 +7,7 @@ $comic_selected = $_GET["selected_details"]
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" type="image/svg+xml" src="{{URL::to('fav-icon.ico')}}">
         <title>Laravel</title>
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@ $comic_selected = $_GET["selected_details"]
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="antialiased">
-
+        @include('partials.header')
         <section class="container d-flex flex-wrap">
                 <h1 class="col-12 text-center p-1">
                     {{$film[$comic_selected]['title']}}
