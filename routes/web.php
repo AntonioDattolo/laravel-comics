@@ -25,10 +25,13 @@ Route::get('/home', function () {
         "film" => config("data")
 ];
     return view('welcome',$data);
-});
-Route::get('/details', function () {
+})->name("home");
+Route::get('/details/{indice}', function ($indice) {
     $data = [
         "film" => config("data")
-];
-    return view('details',$data);
-});
+    ];
+    $comic_selected = [
+        "film" => $data["film"][intval($indice)]
+    ];
+    return view('details', $comic_selected);
+})->name("details");
