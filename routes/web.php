@@ -15,23 +15,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        "film" => config("data")
+        "comics" => config("data")
 ];
     return view('welcome',$data);
 });
 
 Route::get('/home', function () {
     $data = [
-        "film" => config("data")
+        "comics" => config("data")
 ];
     return view('welcome',$data);
 })->name("home");
 Route::get('/details/{indice}', function ($indice) {
     $data = [
-        "film" => config("data")
+        "comics" => config("data")
     ];
-    $comic_selected = [
-        "film" => $data["film"][intval($indice)]
-    ];
-    return view('details', $comic_selected);
+    if(intval($indice) <= count($data["comics"])-1){
+        $comic_selected = [
+            "comics" => $data["comics"][intval($indice)]
+        ];
+        return view('details', $comic_selected);
+    }else{
+        abort(404);
+    }
 })->name("details");
